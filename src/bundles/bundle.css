@@ -134,6 +134,10 @@ select {
   transform: translateY(20px);
   pointer-events: none;
   transition: opacity 0.3s cubic-bezier(0.6, 0.01, 0, 0.99), transform 0.3s cubic-bezier(0.6, 0.01, 0, 0.99); }
+  .dropdown--geo:before {
+    left: 185px; }
+  .dropdown--world:before {
+    left: 465px; }
   .dropdown.visible {
     transform: translateY(0);
     opacity: 1;
@@ -142,7 +146,6 @@ select {
     content: "";
     position: absolute;
     top: -10px;
-    left: 185px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid #fff; }

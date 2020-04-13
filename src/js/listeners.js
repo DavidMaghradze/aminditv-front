@@ -1,11 +1,39 @@
 $(document).ready(function() {
-  $(".select--geo").click(function() {
-    $(".dropdown--world").removeClass("visible")
-    $(".dropdown--geo").toggleClass("visible")
+  $(document).click(function() {
+    const dropdowns = $(".dropdown")
+    dropdowns.each(function() {
+      if ($(this).hasClass("visible")) {
+        $(this).removeClass("visible")
+      }
+    })
+  })
+
+  $(".select--geo").click(function(event) {
+    event.stopPropagation()
+    const worldDropdown = $(".dropdown--world")
+    const isVisible = worldDropdown.hasClass("visible")
+    if (isVisible) {
+      worldDropdown.removeClass("visible")
+      setTimeout(() => {
+        $(".dropdown--geo").toggleClass("visible")
+      }, 150)
+    } else {
+      $(".dropdown--geo").toggleClass("visible")
+    }
   })
 
   $(".select--world").click(function() {
-    $(".dropdown--geo").removeClass("visible")
-    $(".dropdown--world").toggleClass("visible")
+    event.stopPropagation()
+    const geoDropdown = $(".dropdown--geo")
+    const isVisible = geoDropdown.hasClass("visible")
+
+    if (isVisible) {
+      geoDropdown.removeClass("visible")
+      setTimeout(() => {
+        $(".dropdown--world").toggleClass("visible")
+      }, 150)
+    } else {
+      $(".dropdown--world").toggleClass("visible")
+    }
   })
 })

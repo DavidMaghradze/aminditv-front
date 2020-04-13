@@ -14,6 +14,14 @@
   transition: opacity 0.3s cubic-bezier(0.6, 0.01, 0, 0.99),
     transform 0.3s cubic-bezier(0.6, 0.01, 0, 0.99);
 
+  &--geo:before {
+    left: 185px;
+  }
+
+  &--world:before {
+    left: 465px;
+  }
+
   &.visible {
     transform: translateY(0);
     opacity: 1;
@@ -24,7 +32,6 @@
     content: "";
     position: absolute;
     top: -10px;
-    left: 185px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid $main-color;
