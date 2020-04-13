@@ -1,0 +1,25 @@
+.select {
+  padding: 15px 20px;
+  background: $main-color;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__arrow-down {
+    border: 1px solid #eeedf7;
+    margin-left: 50px;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+  }
+}

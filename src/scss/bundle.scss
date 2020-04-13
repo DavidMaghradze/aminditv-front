@@ -1,5 +1,9 @@
-@import "node_modules/bootstrap/scss/bootstrap";
 @import "./abstracts/variables";
-h1 {
-  color: $color;
-}
+@import "./base/typography";
+@import "./base/reset";
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/filters";
+
+@import "./components/select";
+@import "./components/dropdown";

@@ -15,7 +15,12 @@ function hello(cb) {
 }
 
 function compileSass(cb) {
-  src(["src/libs/bootstrap/css/*.css", "src/sass/*.scss"])
+  src([
+    "src/scss/*.scss",
+    "src/scss/abstracts/*.scss",
+    "src/scss/base/*.scss",
+    "src/scss/layout/*.scss"
+  ])
     .pipe(sass().on("error", sass.logError))
     .pipe(concat("bundle.css"))
     .pipe(dest("src/bundles"))
@@ -36,10 +41,14 @@ function bundleJs(cb) {
 
 function watcher(cb) {
   watch(
-    ["src/libs/bootstrap/css/*.css", "src/sass/*.scss"],
+    [
+      "src/scss/*.scss",
+      "src/scss/abstracts/*.scss",
+      "src/scss/base/*.scss",
+      "src/scss/layout/*.scss"
+    ],
     series("compileSass")
   )
-  watch([popper, jquery, bootstrap, "src/scripts/*.js"], series("bundleJs"))
   cb()
 }
 

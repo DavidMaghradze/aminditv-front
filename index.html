@@ -4,18 +4,151 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- <link rel="stylesheet" href="bundles/bundle.css" class="href" /> -->
+    <link rel="icon" href="src/images/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="src/bundles/bundle.css" />
+    <title>Amindi TV - ამინდის პროგნოზი</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Amindi Tv</h1>
+    <header class="header">
+      <div class="container no-padding">
+        <div class="row  align-items-center no-gutters">
+          <div class="col-md-3">
+            <a href="index.html">
+              <figure class="header__logo">
+                <img src="src/images/logo.png" alt="" />
+              </figure>
+            </a>
+          </div>
+          <div class="col-md-9">
+            <nav class="header__nav">
+              <ul>
+                <li>
+                  <a href="" class="header__nav-item">ამინდის პროგნოზი</a>
+                </li>
+                <li>
+                  <a href="" class="header__nav-item header__nav-item--tv">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        d="M416 243v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm96-100v288c0 26.5-21.5 48-48 48h-16v33h-16l-11-33H91l-11 33H64v-33H48c-26.5 0-48-21.5-48-48V143c0-26.5 21.5-48 48-48h160.1l-74.8-67.1c-6.6-5.9-7.2-16-1.3-22.6 5.9-6.6 16-7.2 22.6-1.3L256 95h.8L357.3 4.1c6.6-5.9 16.7-5.4 22.6 1.2 5.9 6.6 5.4 16.7-1.2 22.6L304.5 95H464c26.5 0 48 21.5 48 48zm-32 0c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v288c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16V143zm-256 49c-68.8 0-106.2 2.3-125.3 4.3-1.3 14.4-2.7 41.5-2.7 90.7 0 50.5 1.4 78 2.7 92.8 19.2 1.9 56.5 4.2 125.3 4.2s106.1-2.3 125.3-4.2c1.3-14.7 2.7-42.3 2.7-92.8 0-49.2-1.4-76.3-2.7-90.7-19.1-2-56.5-4.3-125.3-4.3m0-32c128 0 152 8 152 8s8 0 8 119c0 121-8 121-8 121s-24 8-152 8-152-8-152-8-8 0-8-121c0-119 8-119 8-119s24-8 152-8zm204 159h8c6.6 0 12-5.4 12-12v-8c0-6.6-5.4-12-12-12h-8c-6.6 0-12 5.4-12 12v8c0 6.6 5.4 12 12 12z"
+                      />
+                    </svg>
+                    ტელევიზია</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="header__nav-item">ვალუტა</a>
+                </li>
+                <li>
+                  <a href="" class="header__nav-item">ჯანმრთელობა</a>
+                </li>
+                <li>
+                  <a href="" class="header__nav-item">რადიო</a>
+                </li>
+                <li>
+                  <a href="" class="header__nav-item">ფრენები</a>
+                </li>
+                <li>
+                  <a href="" class="header__nav-item">მსოფლიო დრო</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="filters">
+      <div class="container no-padding filters__container">
+        <div class="dropdown dropdown--geo">
+          <ul>
+            <li class="dropdown__item">
+              აბასთუმანი <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              ახალციხე <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              ბათუმი <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              აბასთუმანი <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              ახალციხე <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              ბათუმი <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              აბასთუმანი <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              ახალციხე <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              ბათუმი <span>4<sup>o</sup></span>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown dropdown--world">
+          <ul>
+            <li class="dropdown__item">
+              მიუნხენი <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              პარიზი <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              ლონდონი <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              მანჩესტერი <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              ბარსელონა <span>4<sup>o</sup></span>
+            </li>
+            <li class="dropdown__item">
+              მადრიდი <span>4<sup>o</sup></span>
+            </li>
+          </ul>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-sm-5">
+            <div class="cities d-flex">
+              <div class="select select--geo mr-2">
+                აირჩიე ქალაქი
+                <span class="select__arrow-down">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                      d="M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="select select--world">
+                მსოფლიოს ქალაქები
+                <span class="select__arrow-down">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                      d="M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6"></div>
+        </div>
+      </div>
+    </div>
   </body>
   <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -37,5 +170,5 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"
   ></script>
-  <!-- <script src="bundles/bundle.js"></script> -->
+  <script src="src/js/listeners.js"></script>
 </html>

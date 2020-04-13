@@ -1,0 +1,33 @@
+@font-face {
+  font-family: main;
+  src: url("../fonts/MyriadGEOMtavruliMedium_0.ttf");
+}
+
+@font-face {
+  font-family: mainBold;
+  src: url("../fonts/MyriadGEOMtavruliBold.otf");
+}
+
+@font-face {
+  font-family: secondary;
+  src: url("../fonts/HelveticaNeueLTGEO-55Roman.ttf");
+}
+
+@font-face {
+  font-family: secondaryBold;
+  src: url("../fonts/HelveticaNeueLTGEO-75Bold.ttf");
+}
+
+body {
+  font-family: main;
+  font-size: $main-fs;
+}
+
+.select {
+  font-size: 15px;
+}
+
+.dropdown {
+  font-family: secondary;
+  font-size: $small-fs;
+}
