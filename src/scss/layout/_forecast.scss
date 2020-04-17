@@ -1,0 +1,107 @@
+.forecast {
+  margin-top: 25px;
+  color: $main-color;
+  &__content {
+    padding: 25px 28px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: $forecast-bg;
+  }
+
+  &__datetime {
+    svg {
+      fill: $main-color;
+      width: 12px;
+      height: 12px;
+      margin-right: 5px;
+    }
+  }
+
+  &__footer {
+    padding: 25px 28px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  &__weather-image {
+    img {
+      width: 140px;
+    }
+  }
+
+  &__days {
+    padding: 20px;
+    background: $forecast-bg;
+    border-radius: 5px;
+    height: 100%;
+
+    &-title svg {
+      fill: $main-color;
+      width: 25px;
+      height: 25px;
+    }
+
+    &-content {
+      margin-top: 25px;
+    }
+
+    &-items {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+
+    &-item {
+      text-align: center;
+      &:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    &-item-header {
+      padding: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &-item-details {
+      padding: 10px;
+    }
+
+    &-item-image {
+      img {
+        width: 90px;
+        height: 64px;
+        object-fit: cover;
+      }
+    }
+
+    &-day-night {
+      span {
+        position: relative;
+        display: inline-block;
+      }
+
+      span:not(:last-child) {
+        margin-right: 10px;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 8px;
+          right: -10px;
+          width: 1px;
+          height: 15px;
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+
+    &-right {
+      width: 268px;
+      height: 326px;
+      border-radius: 4px;
+      padding: 25px 28px;
+      background-image: url("../../src/images/wind.jpg");
+      background-color: rgba(13, 29, 35, 0.7);
+    }
+  }
+}

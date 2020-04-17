@@ -24,10 +24,73 @@ body {
 }
 
 .select {
-  font-size: 15px;
+  font-size: 14px;
+  font-family: secondary;
+
+  &--strong {
+    font-family: main;
+  }
 }
 
 .dropdown {
   font-family: secondary;
   font-size: $small-fs;
+}
+
+.forecast {
+  font-family: secondary;
+  font-size: 13px;
+  &__city-name {
+    font-size: 30px;
+  }
+
+  &__datetime {
+    font-family: secondary;
+    font-size: 13px;
+  }
+
+  &__weather {
+    font-family: secondaryBold;
+    font-size: 16px;
+  }
+
+  &__temp {
+    font-family: mainBold;
+    font-size: 40px;
+  }
+
+  &__days {
+    font-family: main;
+
+    &-title {
+      font-size: 18px;
+    }
+
+    &-day {
+      font-size: 15px;
+    }
+
+    &-item-details article {
+      font-family: secondary;
+    }
+
+    &-day-night {
+      font-size: 20px;
+      font-family: secondaryBold;
+    }
+
+    &-right {
+      font-family: secondary;
+      font-size: 13px;
+
+      header {
+        font-family: main;
+        font-size: 17px;
+      }
+    }
+  }
+
+  &__item-header {
+    font-size: 13px;
+  }
 }

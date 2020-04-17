@@ -36,4 +36,12 @@ $(document).ready(function() {
       $(".dropdown--world").toggleClass("visible")
     }
   })
+
+  $(".select").click(function(event) {
+    event.stopPropagation()
+    console.log($(this).find(".dropdown"))
+    $(this)
+      .find(".dropdown")
+      .toggleClass("visible")
+  })
 })
