@@ -48,6 +48,18 @@
     border-bottom: 10px solid $main-color;
   }
 
+  &--top {
+    top: -50px;
+    transform: translateY(-20px);
+
+    &:before {
+      top: unset;
+      bottom: -10px;
+      border-bottom: none;
+      border-top: 10px solid $main-color;
+    }
+  }
+
   &--geo,
   &--world {
     padding: 25px;

@@ -6,6 +6,7 @@
   "dependencies": {
     "add": "^2.0.6",
     "bootstrap": "^4.4.1",
+    "chart.js": "^2.9.3",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "jquery": "^3.4.1",

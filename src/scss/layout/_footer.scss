@@ -1,0 +1,51 @@
+.footer {
+  background: rgba(7, 19, 22, 0.2);
+  padding: 30px 0;
+
+  &__nav {
+    color: $main-color;
+
+    li:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    a {
+      transition: 0.2s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+
+    &--right {
+      li:not(:last-child) {
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 5px;
+          right: -15px;
+          width: 1px;
+          height: 10px;
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
+  &__fb {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .copyright {
+    color: #9faeb3;
+
+    a {
+      color: $main-color;
+    }
+  }
+}

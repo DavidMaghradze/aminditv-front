@@ -94,3 +94,53 @@ body {
     font-size: 13px;
   }
 }
+
+.tv {
+  &__circle {
+    font-family: secondaryBold;
+    font-size: 10px;
+  }
+}
+
+.weather-hours {
+  font-family: secondary;
+  font-size: 15px;
+
+  &__title {
+    font-family: main;
+    font-size: 18px;
+  }
+
+  &__list {
+    &-item-desc {
+      font-size: 14px;
+    }
+
+    &-item-temp {
+      font-size: 17px;
+      font-family: secondaryBold;
+
+      sup {
+        font-family: secondary;
+      }
+    }
+  }
+
+  &__footer {
+    font-family: main;
+  }
+}
+
+.currency {
+  &__title {
+    font-size: 18px;
+  }
+
+  &__list-item-convert {
+    font-family: secondary;
+  }
+}
+
+.copyright {
+  font-family: secondary;
+}

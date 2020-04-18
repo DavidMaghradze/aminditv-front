@@ -1,6 +1,7 @@
 const { series, src, dest, watch } = require("gulp")
 const sass = require("gulp-sass")
 const concat = require("gulp-concat")
+const chart = require("chart.js")
 
 // The `build` function is exported so it is public and can be run with the `gulp` command.
 // It can also be used within the `series()` composition.
@@ -16,6 +17,7 @@ function hello(cb) {
 
 function compileSass(cb) {
   src([
+    "node_modules/chart.js/dist/chart.min.css",
     "src/scss/*.scss",
     "src/scss/abstracts/*.scss",
     "src/scss/base/*.scss",
@@ -28,12 +30,7 @@ function compileSass(cb) {
 }
 
 function bundleJs(cb) {
-  src([
-    // "node_modulesjquerydistjquery.min.js",
-    // "node_modulespopper.jsdistpopper.min.js",
-    // "node_modules/bootstrap/dist/js/bootstrap.min.js",
-    "src/scripts/*.js"
-  ])
+  src(["node_modules/chart.js/dist/chart.min.js"])
     .pipe(concat("bundle.js"))
     .pipe(dest("src/bundles"))
   cb()
@@ -42,6 +39,7 @@ function bundleJs(cb) {
 function watcher(cb) {
   watch(
     [
+      "node_modules/chart.js/dist/chart.min.css",
       "src/scss/*.scss",
       "src/scss/abstracts/*.scss",
       "src/scss/base/*.scss",

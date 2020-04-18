@@ -1,0 +1,50 @@
+.btn {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+
+  &--more {
+    color: $main-color;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $hover-color;
+    }
+
+    span {
+      margin-right: 10px;
+    }
+
+    svg {
+      width: 10px;
+    }
+  }
+
+  &--play {
+    width: 75px;
+    height: 75px;
+    background: $hover-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+      svg {
+        transform: scale(1);
+      }
+    }
+
+    svg {
+      width: 25px;
+      fill: $main-color;
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+    }
+  }
+}

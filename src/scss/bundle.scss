@@ -1,11 +1,20 @@
 @import "./abstracts/variables";
+@import "./abstracts/animations";
+
 @import "./base/typography";
 @import "./base/reset";
+
 @import "./layout/header";
 @import "./layout/navigation";
 @import "./layout/filters";
 @import "./layout/forecast";
+@import "./layout/tv";
+@import "./layout/weather-hours";
+@import "./layout/currecny";
+@import "./layout/footer";
 
 @import "./components/select";
 @import "./components/dropdown";
 @import "./components/input";
+@import "./components/button";
+@import "./components/chart.scss";
