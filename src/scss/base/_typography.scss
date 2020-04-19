@@ -144,3 +144,17 @@ body {
 .copyright {
   font-family: secondary;
 }
+
+@media (max-width: 1199px) {
+  .forecast__days-day-night {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    &__nav-mobile {
+      font-size: 16px;
+    }
+  }
+}

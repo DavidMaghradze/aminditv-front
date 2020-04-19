@@ -1,14 +1,17 @@
 input {
   border: none;
   outline: none;
-  opacity: 0.5;
   transition: 0.2s ease;
 
-  &:hover {
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:hover::placeholder {
     opacity: 0.7;
   }
 
-  &:focus {
+  &:focus::placeholder {
     opacity: 1;
   }
 }

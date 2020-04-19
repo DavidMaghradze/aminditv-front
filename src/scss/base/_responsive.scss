@@ -1,0 +1,355 @@
+@media (min-width: 1260px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header {
+    &__logo {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__nav-item {
+      padding: 8px;
+    }
+  }
+
+  .filters {
+    .dropdown {
+      &--geo,
+      &--world {
+        ul li:not(:nth-child(5n + 0)) {
+          margin-right: 20px;
+        }
+
+        li {
+          padding: 10px;
+          width: 166px;
+        }
+      }
+      &--geo:before {
+        left: 150px;
+      }
+
+      &--world:before {
+        left: 390px;
+      }
+    }
+
+    .select {
+      &__arrow-down {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .forecast {
+    &__content {
+      padding: 15px;
+    }
+
+    &__weather-image img {
+      width: 100px;
+    }
+
+    &__days-item {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .footer {
+    &__nav {
+      li:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      &--right li:not(:last-child):after {
+        right: -10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    &__logo img {
+      width: 215px;
+    }
+    &__nav {
+      display: none;
+
+      &-mobile {
+        display: block;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(11, 37, 51, 0.95);
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.65, 0, 0.44, 1.01);
+
+        &__close {
+          svg {
+            width: 22px;
+            height: 22px;
+            fill: $main-color;
+            margin-right: 10px;
+            margin-top: -5px;
+            transition: fill 0.2s ease;
+          }
+        }
+
+        &__header {
+          padding: 30px;
+          background: rgba(255, 255, 255, 0.1);
+          color: $main-color;
+        }
+
+        &.shown {
+          transform: translateX(0);
+        }
+      }
+
+      &-item {
+        display: block;
+        width: 100%;
+        padding: 20px 30px;
+
+        &--tv {
+          border-radius: 0;
+        }
+      }
+    }
+
+    &__mobile-bar {
+      opacity: 1;
+      pointer-events: auto;
+
+      svg {
+        width: 27px;
+        height: 27px;
+        fill: $main-color;
+      }
+    }
+
+    .searchbar {
+      background: rgba(0, 0, 0, 9);
+      border-radius: 4px;
+      padding: 10px 20px 10px 10px;
+
+      input {
+        width: 100%;
+        background: rgba(0, 0, 0, 8);
+        padding: 10px;
+        color: $main-color;
+        &::placeholder {
+          color: $main-color;
+        }
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+        fill: $main-color;
+      }
+    }
+  }
+
+  .filters {
+    .search {
+      display: none;
+    }
+
+    .dropdown {
+      &--world {
+        display: none;
+      }
+      &--geo {
+        ul li:not(:nth-child(3n + 0)) {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .select {
+      &--world {
+        display: none;
+      }
+
+      &.langs {
+        order: 2;
+      }
+
+      &.temperature {
+        order: 1;
+
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .forecast {
+    &__days {
+      display: none;
+    }
+  }
+
+  .tv {
+    height: 345px;
+    margin-bottom: 20px;
+  }
+
+  .weather-hours {
+    margin-left: -1rem;
+  }
+
+  .chart {
+    display: none;
+  }
+
+  .currency {
+    margin-left: -1rem;
+  }
+
+  .footer {
+    &__nav {
+      display: none;
+
+      &--right {
+        display: flex;
+        width: 100%;
+
+        > div {
+          width: 100%;
+          justify-content: space-between !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 40px;
+  }
+
+  .filters {
+    .dropdown {
+      &--geo {
+        left: 40px;
+        width: calc(100% - 80px);
+      }
+    }
+  }
+
+  .forecast {
+    margin-top: 0;
+
+    &__content {
+      background: rgba(13, 29, 35, 0.5);
+      margin-left: -20px;
+      margin-right: -20px;
+      padding: 25px 40px;
+      border-radius: 0;
+    }
+    &__footer {
+      background: transparent;
+      padding: 20px 0;
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    &__logo img {
+      width: 140px;
+    }
+
+    &__mobile-bar svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .hamburger {
+    span {
+      height: 3px;
+
+      &:after,
+      &:before {
+        height: 3px;
+      }
+
+      &:before {
+        top: -8px;
+      }
+
+      &:after {
+        top: 8px;
+      }
+    }
+  }
+
+  .filters {
+    .dropdown {
+      &--geo {
+        left: 20px;
+        width: calc(100% - 40px);
+      }
+    }
+
+    .cities {
+      width: 100%;
+      margin-bottom: 12px;
+
+      .select--geo {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    .temperature {
+      justify-content: space-between;
+    }
+
+    .temperature,
+    .langs {
+      width: 50%;
+    }
+  }
+
+  .currency {
+    &__list-item-currency {
+      padding: 10px;
+      width: 140px;
+    }
+
+    &__list-item-convert {
+      font-size: 12px;
+    }
+  }
+}
+
+// FOR TIME
+// @media (max-width: 992px) {
+//   .container {
+//     overflow: hidden;
+//   }
+// }
+// --------

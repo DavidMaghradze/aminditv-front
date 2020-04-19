@@ -44,4 +44,23 @@ $(document).ready(function() {
       .find(".dropdown")
       .toggleClass("visible")
   })
+
+  // show-hide searchbar on mobile
+  $(".header__mobile-bar .btn--search").click(function() {
+    $(".myModal").addClass("visible")
+    $(".myModal__content").click(function(event) {
+      event.stopPropagation()
+    })
+    $(".myModal").click(function() {
+      $(this).removeClass("visible")
+    })
+  })
+
+  // show-hide mobile menu
+  $(".hamburger").click(function() {
+    $(".header__nav-mobile").addClass("shown")
+    $(".header__nav-mobile__header").click(function() {
+      $(".header__nav-mobile").removeClass("shown")
+    })
+  })
 })

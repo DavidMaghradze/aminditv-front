@@ -3,6 +3,10 @@
   background: $header-bg-layer;
 
   &__nav {
+    &-mobile {
+      display: none;
+    }
+
     ul {
       display: flex;
       align-items: center;
@@ -43,5 +47,11 @@
         }
       }
     }
+  }
+
+  &__mobile-bar {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
   }
 }

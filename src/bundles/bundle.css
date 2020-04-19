@@ -134,11 +134,20 @@ body {
 .copyright {
   font-family: secondary; }
 
+@media (max-width: 1199px) {
+  .forecast__days-day-night {
+    font-size: 16px; } }
+
+@media (max-width: 991px) {
+  .header__nav-mobile {
+    font-size: 16px; } }
+
 *,
 *:after,
 *:before {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
   width: 100%;
@@ -173,7 +182,7 @@ a:hover {
   text-decoration: none; }
 
 .container {
-  max-width: 1200px; }
+  transition: max-width 0.2s ease; }
   .container.main {
     background: #fff;
     padding: 20px;
@@ -190,6 +199,8 @@ select {
 .header {
   padding: 25px 0;
   background: rgba(9, 13, 20, 0.4); }
+  .header__nav-mobile {
+    display: none; }
   .header__nav ul {
     display: flex;
     align-items: center;
@@ -216,6 +227,10 @@ select {
       .header__nav-item--tv:hover {
         background: #fb0b32;
         color: #fff; }
+  .header__mobile-bar {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease; }
 
 .filters {
   padding: 10px 0;
@@ -223,6 +238,8 @@ select {
   background-size: cover; }
   .filters__container {
     position: relative; }
+  .filters .temperature .select__arrow-down {
+    margin-left: 20px; }
 
 .forecast {
   margin-top: 25px;
@@ -352,6 +369,7 @@ select {
   padding: 25px;
   height: 100%;
   background: url("../../../src/images/weather-days-bg.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   color: #fff; }
@@ -563,11 +581,12 @@ select {
 input {
   border: none;
   outline: none;
-  opacity: 0.5;
   transition: 0.2s ease; }
-  input:hover {
+  input::placeholder {
+    opacity: 0.5; }
+  input:hover::placeholder {
     opacity: 0.7; }
-  input:focus {
+  input:focus::placeholder {
     opacity: 1; }
 
 .btn {
@@ -608,3 +627,226 @@ input {
   padding: 40px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.1); }
+
+.hamburger span {
+  display: inline-block;
+  width: 30px;
+  height: 5px;
+  border-radius: 2px;
+  background: white;
+  position: relative;
+  transition: background 0.5s ease; }
+  .hamburger span:after, .hamburger span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 5px;
+    border-radius: 2px;
+    background: #fff;
+    transition: transform 0.5s ease; }
+  .hamburger span:before {
+    top: -10px; }
+  .hamburger span:after {
+    top: 10px; }
+
+.myModal {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease; }
+  .myModal__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 40px; }
+  .myModal.visible {
+    opacity: 1;
+    pointer-events: auto; }
+
+@media (min-width: 1260px) {
+  .container {
+    max-width: 1200px; } }
+
+@media (max-width: 1199px) {
+  .header__logo {
+    width: 100%; }
+    .header__logo img {
+      width: 100%; }
+  .header__nav-item {
+    padding: 8px; }
+  .filters .dropdown--geo ul li:not(:nth-child(5n + 0)), .filters .dropdown--world ul li:not(:nth-child(5n + 0)) {
+    margin-right: 20px; }
+  .filters .dropdown--geo li, .filters .dropdown--world li {
+    padding: 10px;
+    width: 166px; }
+  .filters .dropdown--geo:before {
+    left: 150px; }
+  .filters .dropdown--world:before {
+    left: 390px; }
+  .filters .select__arrow-down {
+    margin-left: 30px; }
+  .forecast__content {
+    padding: 15px; }
+  .forecast__weather-image img {
+    width: 100px; }
+  .forecast__days-item:last-child {
+    display: none; }
+  .footer__nav li:not(:last-child) {
+    margin-right: 20px; }
+  .footer__nav--right li:not(:last-child):after {
+    right: -10px; } }
+
+@media (max-width: 991px) {
+  .header__logo img {
+    width: 215px; }
+  .header__nav {
+    display: none; }
+    .header__nav-mobile {
+      display: block;
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(11, 37, 51, 0.95);
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.65, 0, 0.44, 1.01); }
+      .header__nav-mobile__close svg {
+        width: 22px;
+        height: 22px;
+        fill: #fff;
+        margin-right: 10px;
+        margin-top: -5px;
+        transition: fill 0.2s ease; }
+      .header__nav-mobile__header {
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff; }
+      .header__nav-mobile.shown {
+        transform: translateX(0); }
+    .header__nav-item {
+      display: block;
+      width: 100%;
+      padding: 20px 30px; }
+      .header__nav-item--tv {
+        border-radius: 0; }
+  .header__mobile-bar {
+    opacity: 1;
+    pointer-events: auto; }
+    .header__mobile-bar svg {
+      width: 27px;
+      height: 27px;
+      fill: #fff; }
+  .header .searchbar {
+    background: black;
+    border-radius: 4px;
+    padding: 10px 20px 10px 10px; }
+    .header .searchbar input {
+      width: 100%;
+      background: black;
+      padding: 10px;
+      color: #fff; }
+      .header .searchbar input::placeholder {
+        color: #fff; }
+    .header .searchbar svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff; }
+  .filters .search {
+    display: none; }
+  .filters .dropdown--world {
+    display: none; }
+  .filters .dropdown--geo ul li:not(:nth-child(3n + 0)) {
+    margin-right: 20px; }
+  .filters .select--world {
+    display: none; }
+  .filters .select.langs {
+    order: 2; }
+  .filters .select.temperature {
+    order: 1; }
+    .filters .select.temperature span {
+      margin-left: 10px; }
+  .forecast__days {
+    display: none; }
+  .tv {
+    height: 345px;
+    margin-bottom: 20px; }
+  .weather-hours {
+    margin-left: -1rem; }
+  .chart {
+    display: none; }
+  .currency {
+    margin-left: -1rem; }
+  .footer__nav {
+    display: none; }
+    .footer__nav--right {
+      display: flex;
+      width: 100%; }
+      .footer__nav--right > div {
+        width: 100%;
+        justify-content: space-between !important; } }
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 40px; }
+  .filters .dropdown--geo {
+    left: 40px;
+    width: calc(100% - 80px); }
+  .forecast {
+    margin-top: 0; }
+    .forecast__content {
+      background: rgba(13, 29, 35, 0.5);
+      margin-left: -20px;
+      margin-right: -20px;
+      padding: 25px 40px;
+      border-radius: 0; }
+    .forecast__footer {
+      background: transparent;
+      padding: 20px 0; } }
+
+@media (max-width: 499px) {
+  .container {
+    padding: 0 20px; }
+  .header__logo img {
+    width: 140px; }
+  .header__mobile-bar svg {
+    width: 18px;
+    height: 18px; }
+  .hamburger span {
+    height: 3px; }
+    .hamburger span:after, .hamburger span:before {
+      height: 3px; }
+    .hamburger span:before {
+      top: -8px; }
+    .hamburger span:after {
+      top: 8px; }
+  .filters .dropdown--geo {
+    left: 20px;
+    width: calc(100% - 40px); }
+  .filters .cities {
+    width: 100%;
+    margin-bottom: 12px; }
+    .filters .cities .select--geo {
+      width: 100%;
+      justify-content: space-between; }
+  .filters .temperature {
+    justify-content: space-between; }
+  .filters .temperature,
+  .filters .langs {
+    width: 50%; }
+  .currency__list-item-currency {
+    padding: 10px;
+    width: 140px; }
+  .currency__list-item-convert {
+    font-size: 12px; } }

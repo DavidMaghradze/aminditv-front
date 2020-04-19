@@ -6,4 +6,10 @@
   &__container {
     position: relative;
   }
+
+  .temperature {
+    .select__arrow-down {
+      margin-left: 20px;
+    }
+  }
 }
