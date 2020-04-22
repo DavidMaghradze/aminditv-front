@@ -1,7 +1,6 @@
 .currency {
   border-radius: 5px;
   padding: 25px;
-  height: 100%;
   background: url("../../src/images/currency-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,5 +58,18 @@
       color: rgba(0, 0, 0, 0.8);
       padding-right: 30px;
     }
+  }
+}
+
+// for currency page
+.currency {
+  &__converter {
+    .br-1 {
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__converter-item {
+    padding: 20px 30px;
   }
 }

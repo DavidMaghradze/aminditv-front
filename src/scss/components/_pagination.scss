@@ -1,0 +1,23 @@
+.pagination {
+  &__item {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    color: $main-color;
+    background: #252c2f;
+    transition: background 0.2s ease;
+
+    &:hover,
+    &.active {
+      background: #ffb701;
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}

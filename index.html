@@ -26,7 +26,7 @@
             </a>
           </div>
           <div class="col-xl-9 col-10">
-            <div class="d-flex header__mobile-bar justify-content-end">
+            <div class="header__mobile-bar justify-content-end">
               <button class="btn btn--search mr-3">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"/></svg>
               </button>
@@ -55,7 +55,7 @@
                   <a href="" class="header__nav-item">ამინდის პროგნოზი</a>
                 </li>
                 <li>
-                  <a href="" class="header__nav-item header__nav-item--tv">
+                  <a href="src/pages/tv.html" class="header__nav-item header__nav-item--tv">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -68,19 +68,19 @@
                   >
                 </li>
                 <li>
-                  <a href="" class="header__nav-item">ვალუტა</a>
+                  <a href="src/pages/currency.html" class="header__nav-item">ვალუტა</a>
                 </li>
                 <li>
                   <a href="" class="header__nav-item">ჯანმრთელობა</a>
                 </li>
                 <li>
-                  <a href="" class="header__nav-item">რადიო</a>
+                  <a href="src/pages/radio.html" class="header__nav-item">რადიო</a>
                 </li>
                 <li>
-                  <a href="" class="header__nav-item">ფრენები</a>
+                  <a href="src/pages/flights.html" class="header__nav-item">ფრენები</a>
                 </li>
                 <li>
-                  <a href="" class="header__nav-item">მსოფლიო დრო</a>
+                  <a href="src/pages/world-time.html" class="header__nav-item">მსოფლიო დრო</a>
                 </li>
                 </ul>
               </nav>
@@ -88,10 +88,10 @@
             <nav class="header__nav">
               <ul>
                 <li>
-                  <a href="" class="header__nav-item">ამინდის პროგნოზი</a>
+                  <a href="index.html" class="header__nav-item active">ამინდის პროგნოზი</a>
                 </li>
                 <li>
-                  <a href="" class="header__nav-item header__nav-item--tv">
+                  <a href="src/pages/tv.html" class="header__nav-item header__nav-item--tv">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -104,19 +104,19 @@
                   >
                 </li>
                 <li>
-                  <a href="" class="header__nav-item">ვალუტა</a>
+                  <a href="src/pages/currency.html" class="header__nav-item">ვალუტა</a>
                 </li>
                 <li>
                   <a href="" class="header__nav-item">ჯანმრთელობა</a>
                 </li>
                 <li>
-                  <a href="" class="header__nav-item">რადიო</a>
+                  <a href="src/pages/radio.html" class="header__nav-item">რადიო</a>
                 </li>
                 <li>
-                  <a href="" class="header__nav-item">ფრენები</a>
+                  <a href="src/pages/flights.html" class="header__nav-item">ფრენები</a>
                 </li>
                 <li>
-                  <a href="" class="header__nav-item">მსოფლიო დრო</a>
+                  <a href="src/pages/world-time.html" class="header__nav-item">მსოფლიო დრო</a>
                 </li>
               </ul>
             </nav>
@@ -365,11 +365,11 @@
           <div class="col-lg-9 pl-3">
             <div class="forecast__days">
               <header
-                class="forecast__days-header d-flex justify-content-between"
+                class="forecast__days-header d-flex align-items-center justify-content-between"
               >
                 <h3 class="forecast__days-title">ამინდი დღეების მიხედვით</h3>
                 <h3 class="forecast__days-title">
-                  <a href="#">
+                  <a href="src/pages/full-forecast.html">
                     25 დღის სრული პროგნოზი
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -467,7 +467,7 @@
                     </div>
                   </section>
                 </div>
-                <div class="forecast__days-right ml-3">
+                <div class="forecast__days-wind ml-3">
                   <header class="mb-1">ქარი და წნევა</header>
                   <ul>
                     <li>
@@ -487,7 +487,7 @@
       </div>
     </div>
     <main>
-      <div class="container main no-padding">
+      <div class="container main no-padding p-3">
         <div class="row no-gutters">
           <div class="col-xl-8 col-lg-7 col-12">
             <div class="tv">
@@ -507,7 +507,7 @@
                   </div>
                 </div>
                 <div
-                  class="select select--strong select--transparent select--bordered tv__cities"
+                  class="select select--strong select--transparent tv__cities"
                 >
                   <div class="dropdown dropdown--top">
                     <ul class="p-1">
@@ -752,17 +752,17 @@
             <nav class="footer__nav">
               <ul class="d-flex">
                 <li>
-                  <a href="#">
+                  <a href="index.html">
                     ამინდის პროგნოზი
                   </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="src/pages/tv.html">
                       ტელევიზია
                     </a>
                   </li>
                   <li>
-                      <a href="#">
+                      <a href="src/pages/currency.html">
                         ვალუტა
                       </a>
                     </li>
@@ -772,17 +772,17 @@
                         </a>
                       </li>
                       <li>
-                          <a href="#">
+                          <a href="src/pages/radio.html">
                             რადიო
                           </a>
                         </li>
                       <li>
-                        <a href="#">
+                        <a href="src/pages/flights.html">
                             ფრენები
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="src/pages/world-time.html">
                             მსოფლიო დრო
                         </a>
                       </li>
@@ -799,7 +799,7 @@
                           </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="src/pages/contact.html">
                               კონტაქტი
                             </a>
                           </li>

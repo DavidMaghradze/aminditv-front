@@ -1,0 +1,70 @@
+.table {
+  thead {
+    svg {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  tbody {
+    img {
+      width: 24px;
+      height: 16px;
+    }
+  }
+
+  th,
+  td {
+    &.centered {
+      text-align: center;
+    }
+
+    span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: #f51137;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+  }
+
+  .btn--fb {
+    margin: 0 auto;
+  }
+}
+
+// flex table
+.table-flex {
+  &__header .table-flex__row {
+    background: #e9e8f3;
+  }
+
+  &__row {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  &__col {
+    padding: 20px;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &.centered {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__header,
+  &__body {
+    img {
+      width: 90px;
+      height: 24px;
+      object-fit: contain;
+    }
+  }
+}

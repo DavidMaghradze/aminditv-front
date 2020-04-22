@@ -1,0 +1,26 @@
+.contact-page {
+  &__info-item {
+    svg {
+      width: 25px;
+      height: 33px;
+      fill: #ffb701;
+    }
+
+    span {
+      color: #6e7580;
+    }
+  }
+
+  &__fb {
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: #1976d2;
+      margin-right: 5px;
+    }
+
+    a {
+      color: #1976d2;
+    }
+  }
+}

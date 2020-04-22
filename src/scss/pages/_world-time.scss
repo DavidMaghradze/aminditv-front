@@ -1,0 +1,27 @@
+.world-time {
+  &__item {
+    border: 1px solid #eeedf7;
+    border-radius: 5px;
+    padding: 25px;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    width: 144px;
+    height: 144px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    img {
+      width: 32px;
+      height: 21px;
+    }
+  }
+}

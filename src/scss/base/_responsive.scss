@@ -4,6 +4,18 @@
   }
 }
 
+@media (max-width: 1365px) {
+  .select {
+    padding: 8px 12px;
+  }
+  // Currency Page
+  .currency {
+    &__converter-item {
+      padding: 20px;
+    }
+  }
+}
+
 @media (max-width: 1199px) {
   .header {
     &__logo {
@@ -57,10 +69,8 @@
       width: 100px;
     }
 
-    &__days-item {
-      &:last-child {
-        display: none;
-      }
+    &__days-wind {
+      display: none;
     }
   }
 
@@ -131,6 +141,7 @@
     }
 
     &__mobile-bar {
+      display: flex;
       opacity: 1;
       pointer-events: auto;
 
@@ -201,7 +212,9 @@
 
   .forecast {
     &__days {
-      display: none;
+      margin-left: -1rem;
+      margin-top: 20px;
+      height: unset;
     }
   }
 
@@ -255,8 +268,6 @@
   }
 
   .forecast {
-    margin-top: 0;
-
     &__content {
       background: rgba(13, 29, 35, 0.5);
       margin-left: -20px;
@@ -265,8 +276,39 @@
       border-radius: 0;
     }
     &__footer {
-      background: transparent;
-      padding: 20px 0;
+      padding: 25px 40px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+
+  .tv {
+    height: 245px;
+  }
+}
+
+@media (max-width: 675px) {
+  .forecast__days-item:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .forecast {
+    &__days-header {
+      flex-wrap: wrap;
+    }
+    &__days-items {
+      flex-wrap: wrap;
+    }
+
+    &__days-item {
+      flex: unset;
+      width: 50%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    &__days-item-header {
+      border-bottom: none;
     }
   }
 }

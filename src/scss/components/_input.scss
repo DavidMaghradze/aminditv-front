@@ -5,6 +5,7 @@ input {
 
   &::placeholder {
     opacity: 0.5;
+    font-size: 13px;
   }
 
   &:hover::placeholder {
@@ -13,5 +14,29 @@ input {
 
   &:focus::placeholder {
     opacity: 1;
+  }
+}
+
+.input-group {
+  img {
+    width: 24px;
+    height: 16px;
+  }
+
+  &-prepend {
+    width: 100px;
+    border: 1px solid #ced4da;
+    justify-content: space-between;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  &-text {
+    background: transparent;
+    border: none;
+
+    &:last-child {
+      padding: 0 0.75rem 0 0;
+    }
   }
 }
