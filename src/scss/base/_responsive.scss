@@ -1,13 +1,58 @@
-@media (min-width: 1260px) {
+@media (max-width: 1679px) {
   .container {
-    max-width: 1200px;
+    max-width: 1100px;
+  }
+
+  .header {
+    &__logo {
+      width: 80%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__nav-item {
+      padding: 12px;
+    }
+  }
+
+  .select {
+    padding: 8px 12px;
+  }
+
+  .forecast {
+    &__content {
+      padding: 15px;
+    }
   }
 }
 
 @media (max-width: 1365px) {
-  .select {
-    padding: 8px 12px;
+  .container {
+    max-width: 960px;
   }
+
+  .header {
+    &__logo {
+      width: 70%;
+    }
+
+    &__nav-item {
+      padding: 8px;
+    }
+  }
+
+  .forecast {
+    &__datetime {
+      flex-wrap: wrap;
+    }
+
+    &__days-wind {
+      display: none;
+    }
+  }
+
   // Currency Page
   .currency {
     &__converter-item {
@@ -68,10 +113,6 @@
     &__weather-image img {
       width: 100px;
     }
-
-    &__days-wind {
-      display: none;
-    }
   }
 
   .footer {
@@ -126,6 +167,10 @@
 
         &.shown {
           transform: translateX(0);
+        }
+
+        &__dropdown {
+          display: none;
         }
       }
 
@@ -258,6 +303,10 @@
     padding: 0 40px;
   }
 
+  .m-dn {
+    display: none;
+  }
+
   .filters {
     .dropdown {
       &--geo {
@@ -279,6 +328,20 @@
       padding: 25px 40px;
       margin-left: -20px;
       margin-right: -20px;
+    }
+
+    &__days-item:nth-child(3),
+    &__days-item:nth-child(4) {
+      border-bottom: none;
+    }
+
+    &__days-item:nth-child(even) {
+      border-right: none;
+    }
+
+    &__days-footer {
+      display: block;
+      margin-top: 25px;
     }
   }
 

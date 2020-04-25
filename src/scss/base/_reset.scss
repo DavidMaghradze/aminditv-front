@@ -46,6 +46,10 @@ a:hover {
   text-decoration: none;
 }
 
+a[role="button"] {
+  cursor: pointer;
+}
+
 .container {
   transition: max-width 0.2s ease;
   &.main {

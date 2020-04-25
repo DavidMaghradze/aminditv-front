@@ -45,6 +45,7 @@ body {
   font-family: secondary;
   font-size: 13px;
   &__city-name {
+    font-family: main;
     font-size: 30px;
   }
 
@@ -229,10 +230,11 @@ body {
   font-family: secondary;
 }
 
-@media (max-width: 1365px) {
+@media (max-width: 1679px) {
   .select {
     font-size: 13px;
   }
+
   .forecast {
     &__city-name {
       font-size: 24px;
@@ -240,12 +242,18 @@ body {
     &__days-title {
       font-size: 16px;
     }
+
+    &__days-day-night {
+      font-size: 16px;
+    }
   }
 }
 
-@media (max-width: 1199px) {
-  .forecast__days-day-night {
-    font-size: 16px;
+@media (max-width: 1365px) {
+  .header {
+    &__nav-item {
+      font-size: 13px;
+    }
   }
 }
 

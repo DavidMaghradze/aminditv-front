@@ -1,5 +1,5 @@
 .forecast {
-  margin-top: 25px;
+  margin-top: 20px;
   color: $main-color;
 
   &__content {
@@ -69,6 +69,11 @@
 
     &-item-details {
       padding: 10px;
+      display: flex;
+      flex-direction: column;
+      height: 70%;
+      overflow: hidden;
+      justify-content: space-between;
     }
 
     &-item-image {
@@ -116,5 +121,9 @@
         background-position-y: 50%;
       }
     }
+  }
+
+  &__days-footer {
+    display: none;
   }
 }

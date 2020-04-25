@@ -126,6 +126,20 @@
                   <a href="../../index.html" class="header__nav-item"
                     >ამინდის პროგნოზი</a
                   >
+                  <div class="header__nav-dropdown">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          24 საათის პროგნოზი
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./full-forecast.html">
+                          25 დღის სრული პროგნოზი
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
                   <a
@@ -168,7 +182,7 @@
     </header>
     <div class="filters">
       <div class="container no-padding filters__container">
-        <div class="dropdown dropdown--geo">
+        <div class="dropdown dropdown--cities dropdown--shadow dropdown--geo">
           <ul>
             <li class="dropdown__item">
               აბასთუმანი <span>4<sup>o</sup></span>
@@ -199,7 +213,7 @@
             </li>
           </ul>
         </div>
-        <div class="dropdown dropdown--world">
+        <div class="dropdown dropdown--cities dropdown--shadow dropdown--world">
           <ul>
             <li class="dropdown__item">
               მიუნხენი <span>4<sup>o</sup></span>
@@ -248,8 +262,8 @@
           </div>
           <div class="col-sm-6 col-12">
             <div class="d-flex justify-content-end">
-              <div class="select langs mr-2">
-                <div class="dropdown">
+              <div class="select select--simple langs mr-2">
+                <div class="dropdown dropdown--shadow">
                   <ul>
                     <li>
                       <a href="#">
@@ -286,8 +300,8 @@
                   </svg>
                 </span>
               </div>
-              <div class="select temperature mr-2">
-                <div class="dropdown">
+              <div class="select select--simple temperature mr-2">
+                <div class="dropdown dropdown--shadow">
                   <ul>
                     <li>
                       <a href="#"> F<sup>o</sup> </a>
@@ -304,12 +318,7 @@
                 </span>
               </div>
               <div class="select search">
-                <div class="dropdown">
-                  <ul class="p-2">
-                    <li>აკრიფე ქალაქი</li>
-                  </ul>
-                </div>
-                <input type="text" placeholder="ძებნა.." />
+                <input type="text" placeholder="ქალაქის სახელი..." />
                 <?xml version="1.0" ?><svg
                   height="32px"
                   version="1.1"
