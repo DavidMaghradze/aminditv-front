@@ -26,6 +26,16 @@
       padding: 15px;
     }
   }
+
+  // Currency page
+
+  .currency {
+    &__converter-item {
+      padding: 15px;
+    }
+  }
+
+  // ------------
 }
 
 @media (max-width: 1365px) {
@@ -53,10 +63,69 @@
     }
   }
 
-  // Currency Page
+  // Currency page
+
   .currency {
+    &__converter {
+      > div {
+        max-width: 100%;
+        flex: 100%;
+        border-right: none !important;
+      }
+    }
     &__converter-item {
-      padding: 20px;
+      > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .input-group {
+          width: 30%;
+        }
+      }
+
+      > form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .full-convert {
+        .form-group {
+          width: 50%;
+          label,
+          div {
+            max-width: unset;
+            flex: unset;
+          }
+
+          div {
+            width: 60%;
+          }
+
+          &:nth-child(odd) {
+            label {
+              width: 80px;
+            }
+          }
+
+          &:nth-child(even) {
+            label {
+              width: unset;
+            }
+          }
+
+          &:last-child {
+            div {
+              width: 78%;
+            }
+          }
+
+          div {
+            padding: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -129,6 +198,13 @@
 }
 
 @media (max-width: 991px) {
+  .container {
+    padding: 0 20px;
+
+    &.main {
+      padding: 0;
+    }
+  }
   .header {
     &__logo img {
       width: 215px;
@@ -178,6 +254,11 @@
         display: block;
         width: 100%;
         padding: 20px 30px;
+
+        &:hover {
+          color: unset;
+          background: unset;
+        }
 
         &--tv {
           border-radius: 0;
@@ -294,6 +375,27 @@
         }
       }
     }
+  }
+
+  .sidebar,
+  .main-content {
+    max-width: 100%;
+    width: 100%;
+    flex: 100%;
+  }
+
+  .sidebar {
+    order: 2;
+    margin-top: 15px;
+
+    .weather-hours {
+      margin-left: 0;
+    }
+  }
+
+  .main-content {
+    order: 1;
+    padding-left: 0 !important;
   }
 }
 

@@ -1,57 +1,43 @@
-const { series, src, dest, watch } = require("gulp")
-const sass = require("gulp-sass")
-const concat = require("gulp-concat")
-const chart = require("chart.js")
+const { series, src, dest, watch } = require("gulp");
+const sass = require("gulp-sass");
+const concat = require("gulp-concat");
+const autoprefixer = require("gulp-autoprefixer");
 
-// The `build` function is exported so it is public and can be run with the `gulp` command.
-// It can also be used within the `series()` composition.
-function copyHtml(cb) {
-  src("./*.html").pipe(dest("dist"))
-  cb()
-}
+const jsLibs = [
+  "node_modules/jquery/dist/jquery.min.js",
+  "node_modules/bootstrap/dist/js/bootstrap.min.js",
+  "node_modules/chart.js/dist/chart.min.js",
+];
 
-function hello(cb) {
-  console.log("gulp is running.")
-  cb()
-}
+const cssLibs = [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/chart.js/dist/chart.min.css",
+];
 
 function compileSass(cb) {
-  src([
-    "node_modules/chart.js/dist/chart.min.css",
-    "src/scss/*.scss",
-    "src/scss/abstracts/*.scss",
-    "src/scss/base/*.scss",
-    "src/scss/layout/*.scss"
-  ])
+  src([...cssLibs, "src/scss/*.scss", "src/scss/**/*.scss"])
     .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer())
     .pipe(concat("bundle.css"))
-    .pipe(dest("src/bundles"))
-  cb()
+    .pipe(dest("src/bundles"));
+  cb();
 }
 
 function bundleJs(cb) {
-  src(["node_modules/chart.js/dist/chart.min.js"])
+  src([...jsLibs, "src/js/listeners.js"])
     .pipe(concat("bundle.js"))
-    .pipe(dest("src/bundles"))
-  cb()
+    .pipe(dest("src/bundles"));
+  cb();
 }
 
 function watcher(cb) {
   watch(
-    [
-      "node_modules/chart.js/dist/chart.min.css",
-      "src/scss/*.scss",
-      "src/scss/abstracts/*.scss",
-      "src/scss/base/*.scss",
-      "src/scss/layout/*.scss"
-    ],
-    series("compileSass")
-  )
-  cb()
+    [...cssLibs, "src/scss/*.scss", "src/scss/**/*.scss"],
+    series("compileSass", "bundleJs")
+  );
+  cb();
 }
 
-exports.copyHtml = copyHtml
-exports.compileSass = compileSass
-exports.bundleJs = bundleJs
-exports.watcher = watcher
-exports.default = series(hello)
+exports.compileSass = compileSass;
+exports.bundleJs = bundleJs;
+exports.watcher = watcher;
